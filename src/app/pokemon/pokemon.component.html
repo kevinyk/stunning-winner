@@ -1,0 +1,11 @@
+<form (submit)="requestPokemon()">
+	<p>Number: <input type="number" [(ngModel)]="pokemon.number" name="number" #number="ngModel"></p>
+	<input type="submit" name="">
+</form>
+
+<div *ngIf = "shownPokemon.name.length>0">
+	<fieldset>
+		<img src={{shownPokemon.image}}>
+		<h2>{{shownPokemon.name}}</h2>
+	</fieldset>
+</div>
